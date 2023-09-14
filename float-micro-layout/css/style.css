@@ -1,16 +1,22 @@
 * {
+    padding: 0;
     margin: 0;
-    box-sizing: 0;
     box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
 }
 
 body {
     font-family: 'Fredoka', sans-serif;
+    background-color: #0f0e17;
+    color: white;
 }
 
 .container {
     width: 80%;
-    margin: 0, auto;
+    margin: 0 auto;
 }
 
 main {
@@ -20,16 +26,43 @@ main {
 h1,
 h2 {
     color: fuchsia;
+    margin-bottom: 1em;
 }
 
 h1 {
     font-size: 2.5rem;
 }
 
+h3 {
+    color: orange;
+}
+
+/* Columns layout */
+
+.row {
+    /* background-color: lightblue; */
+}
+
 .col {
     float: left;
     width: calc(100% / 3);
-    /* debug */
-    border: 1px solid white;
-    height: 100px;
+    padding: 0 20px;
+    text-align: center;
+    /* Debug */
+    /* border: 1px solid white; */
+}
+
+.col img {
+    height: 180px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.card {
+    background-color: darkcyan;
+    min-height: 400px;
 }
